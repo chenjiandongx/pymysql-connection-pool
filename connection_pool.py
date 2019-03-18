@@ -26,7 +26,7 @@ class ConnectionPool:
                     )
                 )
 
-        return pymysql.connect(self.kwargs)
+        return pymysql.connect(**self.kwargs)
 
     def _put(self, conn):
         self._queue.put(conn)
